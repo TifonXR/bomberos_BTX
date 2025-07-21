@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bomberos Voluntarios Tequisquiapan</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="container navbar">
+            <img class="logo" src="imagenes/logo.png" alt="Logo Bomberos" />
+            <div class="texto">BOMBEROS VOLUNTARIOS TEQUISQUIAPAN</div>
+
+
+
+        </div>
+    </header>
+
+
+
+    <!-- Sección principal -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1 class="segunda">Emergencias</h1>
+            <a href="tel:+524141012638" class="boton">¡¡LLAMA!!</a>
+
+        </div>
+    </section>
+
+
+    <!-- Información -->
+    <div class="botonera">
+        <a href="https://wa.me/4141223942" class="btn">Cursos y consultoria en Protección Cívil</a>
+        <a href="https://wa.me/4141012638" class="btn">Prevención y visitas a escuelas</a>
+        <a href="https://wa.me/4141012638" class="btn">Procuración de fondos y damas Voluntarias</a>
+        <a href="https://wa.me/4141012638" class="btn">Quiero ser volutario</a>
+    </div>
+
+    <!--Carrusel-->
+    <section class="carousel-section">
+        <h2 style="position:absolute; margin-top:-4%; margin-left: 14.5%;">Galería de Bomberos</h2>
+        <div class="carousel-container">
+            <!-- Carrusel 1 -->
+            <div class="carousel" id="carousel1">
+                <button class="carousel-btn prev">&#10094;</button>
+                <div class="carousel-track-container">
+                    <ul class="carousel-track">
+                        <li class="carousel-slide"><img src="imagenes/drones.jpg" alt="Imagen 1"></li>
+                        <li class="carousel-slide"><img src="imagenes/libra.jpg" alt="Imagen 2"></li>
+                        <li class="carousel-slide"><img src="imagenes/logobomberos.png" alt="Imagen 3"></li>
+                        <li class="carousel-slide"><img src="imagenes/pasto.jpg" alt="Imagen 4"></li>
+                        <li class="carousel-slide"><img src="imagenes/libra5.jpg" alt="Imagen 5"></li>
+                        <li class="carousel-slide"><img src="imagenes/libra17.jpg" alt="Imagen 6"></li>
+                    </ul>
+                </div>
+                <button class="carousel-btn next">&#10095;</button>
+            </div>
+
+            <!-- Carrusel 2 -->
+            <h2 style="position:absolute; margin-top:-4%; margin-left: 49%;">Galería de Bomberos</h2>
+
+            <div class="carousel" id="carousel2">
+                <button class="carousel-btn prev">&#10094;</button>
+                <div class="carousel-track-container">
+                    <ul class="carousel-track">
+                        <li class="carousel-slide"><img src="imagenes/drones.jpg" alt="Imagen 1"></li>
+                        <li class="carousel-slide"><img src="imagenes/libra.jpg" alt="Imagen 2"></li>
+                        <li class="carousel-slide"><img src="imagenes/logobomberos.png" alt="Imagen 3"></li>
+                        <li class="carousel-slide"><img src="imagenes/pasto.jpg" alt="Imagen 4"></li>
+                        <li class="carousel-slide"><img src="imagenes/libra5.jpg" alt="Imagen 5"></li>
+                        <li class="carousel-slide"><img src="imagenes/libra17.jpg" alt="Imagen 6"></li>
+                    </ul>
+                </div>
+                <button class="carousel-btn next">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Modal para imagen ampliada -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">✖</span>
+        <span class="modal-prev" onclick="showPrev()">&#10094;</span>
+        <img class="modal-content" id="modalImage" alt="Imagen ampliada" />
+        <span class="modal-next" onclick="showNext()">&#10095;</span>
+    </div>
+
+
+    <!--<a href="https://wa.me/4141223942" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a> -->
+
+
+    <footer class="footer">
+        <div>
+            <p><strong>EMERGENCIAS:</strong> 4142736109 | 4142734535 | 4141012638</p>
+            <p><strong>OFICINA:</strong> 4142733244 | <strong>WHATSAPP:</strong> 4141223942</p>
+            <div class="social-list">
+                <a href="https://www.youtube.com/@bomberostequisquiapanofici666" target="_blank" aria-label="YouTube"><i
+                        class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@bomberostequisquiapan" target="_blank" aria-label="TikTok"><i
+                        class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/bomberostequisquiapan/" target="_blank" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/BomberosVoluntariosTequisquiapan" target="_blank"
+                    aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="java.js"></script>
+
+</body>
+
+</html>
