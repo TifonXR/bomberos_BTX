@@ -41,16 +41,15 @@ header {
 .texto {
   flex-grow: 1;
   text-align: center;
-  font-size: 30px;
+  font-size: 30px; /* Base size */
   color: gold;
-  margin-left: -45%;
+  margin-left: -45%; /* Adjust for smaller screens */
   font-family: impact;
   text-shadow:
     -2px -2px 0 #000,
     2px -2px 0 #000,
     -2px 2px 0 #000,
     2px 2px 0 #000;
-  /* sombra en las 4 direcciones para simular contorno */
 }
 
 /* HERO SECTION */
@@ -65,7 +64,6 @@ header {
   padding: 0 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden;
-  /* para evitar desbordes */
 }
 
 /* Imagen de fondo + efecto difuminado negro desde arriba hacia abajo */
@@ -85,7 +83,7 @@ header {
 }
 
 /* Contenido encima del fondo */
-.hero>.hero-content {
+.hero > .hero-content {
   position: relative;
   z-index: 2;
   max-width: 600px;
@@ -94,19 +92,16 @@ header {
 
 /* Estilo del título */
 .hero h1.segunda {
-  font-size: 3rem;
+  font-size: 3rem; /* Base size */
   font-weight: 700;
   letter-spacing: 2px;
   margin-bottom: 20px;
   text-transform: uppercase;
   text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
-  /* para mejor lectura */
 }
-
 
 .boton {
   background-color: #9b0803;
-  /* rojo bombero */
   color: white;
   padding: 15px 30px;
   border: none;
@@ -117,21 +112,19 @@ header {
   transition: background-color 0.3s ease;
   box-shadow: 0 4px 8px rgba(211, 47, 47, 0.5);
 }
-.boton:h
 
 .btn1:hover {
   background-color: #b71c1c;
   box-shadow: 0 6px 12px rgba(183, 28, 28, 0.7);
 }
 
-
 .hero-content h1 {
-  font-size: 3em;
+  font-size: 3em; /* Base size */
   margin-bottom: 0.5em;
 }
 
 .hero-content p {
-  font-size: 1.2em;
+  font-size: 1.2em; /* Base size */
   margin-bottom: 1em;
 }
 
@@ -158,9 +151,9 @@ header {
 .atras {
   display: inline-flex;
   align-items: center;
-  position: absolute;
-  top: 20px;
-  left: 20px;
+  position: fixed; /* Changed to fixed for consistency */
+  top: 20px; /* Adjusted for general use */
+  left: 20px; /* Adjusted for general use */
   background-color: #d32f2f;
   color: white;
   padding: 8px 12px;
@@ -187,24 +180,24 @@ header {
   padding: 60px 20px;
   background-color: #000;
   width: 97%;
-  margin: 20px;
+  margin: 20px auto; /* Centered with auto margins */
   border-radius: 10px;
-
 }
 
 .info-section h2 {
   font-size: 2em;
   margin-bottom: 20px;
-  color: #111;
+  color: #fff; /* Changed to white for better visibility on black background */
 }
 
 .info-section p,
 .info-section ul {
   font-size: 1.1em;
   line-height: 1.6;
+  color: #ccc; /* Lighter color for text on black background */
 }
-/*FOOTER*/
 
+/*FOOTER*/
 .footer {
   background: #111;
   color: #fff;
@@ -233,14 +226,6 @@ header {
   flex-wrap: wrap;
 }
 
-@media (min-width: 600px) {
-  .social-list {
-    justify-content: flex-end;
-    margin-top: 0;
-  }
-}
-
-
 .social-list a {
   color: #fff;
   font-size: 20px;
@@ -251,21 +236,6 @@ header {
   color: #ffd700;
   transform: scale(1.2);
 }
-
-@media (min-width: 600px) {
-  .footer div {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 10px;
-    align-items: center;
-    text-align: left;
-  }
-  .footer p {
-    margin: 0;
-  }
-}
-
-
 
 /* CARRUSEL */
 .carousel-section {
@@ -350,13 +320,6 @@ header {
     right: 10px;
 }
 
-@media (max-width: 1100px) {
-    .carousel-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
 /* MODAL */
 .modal {
   display: none;
@@ -420,7 +383,7 @@ header {
   width: 30%;
   height: 30%;
   left: 70%;
-  top: 108.5%;
+  top: 108.5%; /* This might need to be relative to its parent, or adjusted for different screen heights */
   z-index: 2;
 }
 
@@ -436,15 +399,13 @@ p {
 .botonera {
   display: flex;
   justify-content: center;
-  /* Centra los botones horizontalmente */
   gap: 20px;
-  /* Espacio entre botones */
   padding: 20px;
+  flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
 }
 
 .btn {
   height: 200px;
-  /* Puedes ajustar según lo que desees */
   width: 200px;
   background-color: #000;
   color: #fff;
@@ -457,6 +418,7 @@ p {
   justify-content: center;
   text-align: center;
   border: 0.5px solid white;
+  flex-shrink: 0; /* Prevents buttons from shrinking smaller than their content allows */
 }
 
 .btn:hover {
@@ -469,12 +431,13 @@ p {
   background-image: url('imagenes/libra17.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  /* Hace que la imagen cubra todo el fondo */
   background-position: center;
-  /* Centra la imagen */
   width: 100%;
-  height: 100vh;
-  /* Establece una altura de pantalla completa */
+  min-height: 100vh; /* Changed to min-height to accommodate content */
+  display: flex; /* Added flex to center content */
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Added padding for spacing */
 }
 
 .dos .conte {
@@ -487,19 +450,20 @@ p {
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   max-width: 400px;
-  margin: 80px auto;
+  width: 90%; /* Added relative width */
+  margin: auto; /* Centered vertically and horizontally */
   border: 2px solid black;
 }
 
 .dos h1 {
   text-align: center;
   color: #333;
-  margin-top: px;
+  margin-top: 0; /* Adjusted margin */
 }
 
 .dos .contactos {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2rem; /* Base size */
   margin: 2rem 0 1rem;
   color: #c62828;
 }
@@ -510,38 +474,270 @@ p {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* RESPONSIVE MEDIA QUERIES */
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
   .navbar {
     flex-direction: column;
+    padding: 10px;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+  }
+
+  .texto {
+    font-size: 20px;
+    margin-left: 0; /* Remove negative margin for small screens */
+    width: 100%; /* Ensure text takes full width */
+  }
+
+  .hero {
+    height: 70vh; /* Adjust hero section height */
+  }
+
+  .hero h1.segunda {
+    font-size: 2rem; /* Smaller font size for titles */
   }
 
   .hero-content h1 {
-    font-size: 2em;
+    font-size: 2.2em;
   }
 
   .hero-content p {
     font-size: 1em;
   }
 
-  .btn {
-    padding: 12px 24px;
+  .boton, .btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .atras {
+    top: 10px;
+    left: 10px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  .info-section {
+    padding: 30px 15px;
+    width: 95%; /* Slightly larger width for small screens */
+    margin: 15px auto;
+  }
+
+  .info-section h2 {
+    font-size: 1.5em;
+  }
+
+  .info-section p, .info-section ul {
+    font-size: 1em;
+  }
+
+  .carousel-section {
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .carousel-section h2 {
+    font-size: 1.2rem;
   }
 
   .carousel-track-container {
-    max-height: 200px;
+    max-height: 180px;
   }
 
   .carousel-slide img {
-    max-height: 180px;
+    max-height: 160px;
+  }
+
+  .carousel-btn {
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+
+  .modal-close, .modal-prev, .modal-next {
+    font-size: 2rem;
+  }
+
+  .modal-close {
+    top: 10px;
+    right: 15px;
+  }
+
+  .modal-prev {
+    left: 10px;
+  }
+
+  .modal-next {
+    right: 10px;
+  }
+
+  .emer {
+    width: 90%; /* Full width for emergencies on small screens */
+    left: 5%;
+    top: auto; /* Remove fixed top */
+    bottom: 20px; /* Position at bottom */
+    position: fixed; /* Keep it fixed */
+    height: auto;
+    padding: 15px;
+    box-sizing: border-box; /* Include padding in width/height */
+  }
+
+  .emergencias {
+    font-size: 18px;
+  }
+
+  .botonera {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .botonera .btn {
+    width: 90%; /* Make buttons wider */
+    height: 150px; /* Adjust height */
+    font-size: 18px;
+    margin: 0 auto; /* Center buttons */
+  }
+
+  .dos .conte {
+    padding: 20px;
+    max-width: 90%;
+    margin: 20px auto; /* Adjust margin for mobile */
+  }
+
+  .dos h1 {
+    font-size: 1.5em;
+  }
+
+  .dos .contactos {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 0.8rem;
   }
 }
 
-@media (min-width: 768px) {
+/* Small devices (tablets, 600px and up) */
+@media (min-width: 601px) and (max-width: 992px) {
+  .navbar {
+    padding: 0 15px;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .texto {
+    font-size: 25px;
+    margin-left: -30%; /* Moderate adjustment for tablets */
+  }
+
+  .hero h1.segunda {
+    font-size: 2.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-content p {
+    font-size: 1.1em;
+  }
+
+  .atras {
+    top: 15px;
+    left: 15px;
+  }
+
+  .info-section {
+    padding: 40px 20px;
+    width: 95%;
+  }
+
+  .info-section h2 {
+    font-size: 1.8em;
+  }
+
+  .botonera .btn {
+    width: 180px;
+    height: 180px;
+    font-size: 19px;
+  }
+
+  .dos .conte {
+    max-width: 500px;
+    margin: 40px auto;
+  }
+}
+
+/* Medium devices (laptops, 992px and up) - Existing desktop styles mostly apply */
+@media (min-width: 993px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .logo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .texto {
+    font-size: 30px;
+    margin-left: -45%; /* Original margin for larger screens */
+  }
+
+  .hero h1.segunda {
+    font-size: 3rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3em;
+  }
+
+  .hero-content p {
+    font-size: 1.2em;
+  }
+
+  .atras {
+    top: 20px; /* Revert to original for larger screens */
+    left: 20px; /* Revert to original for larger screens */
+  }
+
+  .info-section {
+    width: 97%;
+    margin: 20px auto;
+  }
+
+  .botonera .btn {
+    width: 200px;
+    height: 200px;
+    font-size: 20px;
+  }
+
+  .footer div {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    text-align: left;
+  }
+  .footer p {
+    margin: 0;
+  }
+  .social-list {
+    justify-content: flex-end;
+    margin-top: 0;
+  }
+
   .dos .conte {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 600px; /* Slightly larger for laptops */
   }
 
   .dos .btn {
@@ -549,25 +745,14 @@ p {
   }
 }
 
-.atras {
-  position: fixed;
-  top: 26%;
-  left: 7px;
-  background-color: #d32f2f;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  z-index: 1001;
+/* General overrides to ensure consistency */
+.carousel-container {
+    flex-direction: column; /* Default to column for small screens */
+    align-items: center;
 }
 
-.atras:hover {
-  background-color: #b71c1c;
-}
-
-.atras svg {
-  margin-right: 8px;
+@media (min-width: 1100px) { /* Only revert to row for very large screens if desired, or keep column for stacked carousels */
+    .carousel-container {
+        flex-direction: row; /* Allow multiple carousels side-by-side if enough space */
+    }
 }
