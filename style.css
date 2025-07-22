@@ -592,16 +592,16 @@ p {
   }
 
   .botonera {
-    flex-direction: column; /* Stack buttons vertically */
+    flex-direction: column;
     gap: 15px;
     padding: 15px;
   }
 
   .botonera .btn {
-    width: 90%; /* Make buttons wider */
-    height: 150px; /* Adjust height */
+    width: 90%; 
+    height: 150px; 
     font-size: 18px;
-    margin: 0 auto; /* Center buttons */
+    margin: 0 auto; 
   }
 
   .dos .conte {

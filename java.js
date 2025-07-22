@@ -127,3 +127,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+document.querySelectorAll('.btn').forEach(function(boton) {
+    boton.addEventListener('click', function() {
+        const numero = boton.getAttribute('data-numero');
+        window.location.href = 'https://wa.me/' + numero;
+    });
+});
